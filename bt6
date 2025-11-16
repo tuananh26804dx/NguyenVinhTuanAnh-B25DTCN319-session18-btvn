@@ -1,0 +1,32 @@
+#include <stdio.h>
+int findElement(int arr[], int size, int target) {
+    for (int i = 0; i < size; i++) {
+        if (arr[i] == target) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+int main() {
+    int numbers[] = {10, 25, 5, 15, 30, 20};
+    int arraySize = sizeof(numbers) / sizeof(numbers[0]);
+    int valueToFind = 15;
+    int index = findElement(numbers, arraySize, valueToFind);
+
+    if (index != -1) {
+        printf("Phan tu %d duoc tim thay tai vi tri: %d\n", valueToFind, index);
+    } else {
+        printf("Phan tu %d khong co trong mang\n", valueToFind);
+    }
+    valueToFind = 100;
+    index = findElement(numbers, arraySize, valueToFind);
+
+    if (index != -1) {
+        printf("Phan tu %d duoc tim thay tai vi tri: %d\n", valueToFind, index);
+    } else {
+        printf("Phan tu %d khong co trong mang\n", valueToFind);
+    }
+
+    return 0;
+}
