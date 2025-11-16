@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <math.h>
+
+void swap(int a, int b){
+	int temp = b;
+	b = a;
+	a = temp;
+	printf("Vi tri trong ham %d va %d\n",a, b); 
+}
+int main() {
+	int a=50;
+	int b=100;
+	printf("Vi tri truoc swap: %d va %d\n",a, b);
+	swap(a, b);
+	printf("Vi tri sau swap: %d va %d", a, b); 
+}
