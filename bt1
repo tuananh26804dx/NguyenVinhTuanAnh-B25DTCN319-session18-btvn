@@ -1,0 +1,11 @@
+#include <stdio.h> 
+#include <math.h>
+
+int main() {
+	int num = 50;
+	printf("Dia chi cua bien nguyen thuy la %p",&num);
+	
+	int *ptr = &num;
+	num = 100;
+	printf("\nDia chi cua bien nguyen thuy 2 la %p",&num); 
+} 
