@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <math.h>
+
+void swap(int *a, int *b){
+	int temp = *b;
+	*b = *a;
+	*a = temp; 
+}	
+void tinhTong(int *a, int *b, int *result){
+	*result = *a + *b; 
+}
+int main(){
+	int a = 10;
+	int b = 20;
+	int result;
+	tinhTong(&a, &b, &result);
+	printf("%d",result); 
+}																																																																																																																																																																																																																																																																					
