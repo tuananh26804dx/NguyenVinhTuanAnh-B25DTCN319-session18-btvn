@@ -1,0 +1,14 @@
+#include <stdio.h>
+void inMang(int *mang, int kichThuoc){
+	printf("Cac phan tu trong mang la:");
+	for(int i = 0; i<kichThuoc; i++){
+		printf("%d",*(mang+i));
+	}
+	printf("\n"); 
+}
+int main(){
+	int arr[5] = {1,2,3,4,5}
+	inMang(arr,5);
+	
+	return 0; 
+} 
