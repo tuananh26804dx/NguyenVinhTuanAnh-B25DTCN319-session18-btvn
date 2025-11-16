@@ -1,0 +1,34 @@
+#include <stdio.h>
+void themPhanTu(int mang[], int* kichThuoc, int giaTri, int viTri) {
+    if (viTri < 0 || viTri > *kichThuoc) {
+        printf("Vi tri khong hop le\n");
+        return;
+    }
+    for (int i = *kichThuoc; i > viTri; i--) {
+        mang[i] = mang[i - 1];
+    }
+    mang[viTri] = giaTri;
+    (*kichThuoc)++;
+}
+void inMang(int mang[], int kichThuoc) {
+    for (int i = 0; i < kichThuoc; i++) {
+        printf("%d ", mang[i]);
+    }
+    printf("\n");
+}
+
+int main() {
+    int mang[10] = {1, 2, 3, 4, 5};
+    int kichThuoc = 5;
+    int giaTriCanThem = 99;
+    int viTriCanThem = 2;
+
+    printf("Mang ban dau:\n");
+    inMang(mang, kichThuoc);
+    themPhanTu(mang, &kichThuoc, giaTriCanThem, viTriCanThem);
+
+    printf("\nMang sau khi them phan tu (gia tri: %d, vi tri: %d):\n", giaTriCanThem, viTriCanThem);
+    inMang(mang, kichThuoc);
+
+    return 0;
+}
